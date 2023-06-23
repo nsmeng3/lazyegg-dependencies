@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.lazyegg.boot</groupId>
+    <groupId>io.lazyegg</groupId>
     <artifactId>lazyegg-dependencies</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -34,12 +34,25 @@
         <fluent-mybatis.version>1.9.8</fluent-mybatis.version>
         <spring.boot.admin.version>2.7.4</spring.boot.admin.version>
         <reflections.version>0.9.10</reflections.version>
+        <jjwt.version>0.9.1</jjwt.version>
+        <jose-jwt.version>9.26</jose-jwt.version>
+        <spring-boot.version>2.7.13</spring-boot.version>
+        <cola.version>4.3.0</cola.version>
+        <druid.version>1.2.15</druid.version>
+        <mybatis.plus.boot.starter.version>3.5.3.1</mybatis.plus.boot.starter.version>
+        <fluent-mybatis.version>1.9.8</fluent-mybatis.version>
+        <fastjson.version>2.0.21.graal</fastjson.version>
+        <querydsl.version>5.0.0</querydsl.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
         </dependency>
         <dependency>
             <groupId>io.lazyegg</groupId>
@@ -113,6 +126,11 @@
                 <version>${fastjson.version}</version>
             </dependency>
             <!-- Misc End -->
+            <dependency>
+                <groupId>org.yaml</groupId>
+                <artifactId>snakeyaml</artifactId>
+                <version>2.0</version>
+            </dependency>
 
             <dependency>
                 <groupId>io.lazyegg</groupId>
@@ -171,6 +189,68 @@
                 <groupId>io.lazyegg.boot</groupId>
                 <artifactId>lazyegg-boot-projectmanage-starter</artifactId>
                 <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>io.lazyegg</groupId>
+                <artifactId>lazyegg-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.nimbusds</groupId>
+                <artifactId>nimbus-jose-jwt</artifactId>
+                <version>${jose-jwt.version}</version>
+                <scope>compile</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis.plus.boot.starter.version}</version>
+            </dependency>
+            <!-- querydsl 依赖 -->
+            <dependency>
+                <groupId>com.querydsl</groupId>
+                <artifactId>querydsl-apt</artifactId>
+                <version>${querydsl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.querydsl</groupId>
+                <artifactId>querydsl-jpa</artifactId>
+                <version>${querydsl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus</artifactId>
+                <version>${mybatis.plus.boot.starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>icu.mhb</groupId>
+                <artifactId>mybatis-plus-join</artifactId>
+                <version>1.3.3</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.30</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity-engine-core</artifactId>
+                <version>2.3</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>
+                <version>4.0.0</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
