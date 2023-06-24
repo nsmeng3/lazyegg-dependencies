@@ -46,6 +46,7 @@
         <querydsl.version>5.0.0</querydsl.version>
         <snakeyaml.version>2.0</snakeyaml.version>
         <hutool.version>5.8.20</hutool.version>
+        <dameng.version>8.1.2.192</dameng.version>
     </properties>
 
     <dependencies>
@@ -262,6 +263,17 @@
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>8.0.30</version>
+            </dependency>
+            <!-- 达梦 -->
+            <dependency>
+                <groupId>com.dameng</groupId>
+                <artifactId>DmJdbcDriver18</artifactId>
+                <version>${dameng.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.dameng</groupId>
+                <artifactId>DmDialect-for-hibernate5.6</artifactId>
+                <version>${dameng.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.velocity</groupId>
