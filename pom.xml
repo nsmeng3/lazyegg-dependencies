@@ -1,5 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.lazyegg</groupId>
@@ -53,17 +54,12 @@
             <artifactId>lombok</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>io.lazyegg</groupId>
-            <artifactId>lazyegg-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.yaml</groupId>
-            <artifactId>snakeyaml</artifactId>
-            <version>${snakeyaml.version}</version>
         </dependency>
     </dependencies>
 
@@ -128,17 +124,16 @@
                 <version>3.4</version>
             </dependency>
             <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.11.0</version>
+            </dependency>
+            <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
             <!-- Misc End -->
-            <dependency>
-                <groupId>org.yaml</groupId>
-                <artifactId>snakeyaml</artifactId>
-                <version>${snakeyaml.version}</version>
-            </dependency>
-
 
             <dependency>
                 <groupId>io.lazyegg</groupId>
@@ -161,60 +156,60 @@
                 <version>1.0.0-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>io.lazyegg.boot</groupId>
-                <artifactId>lazyegg-boot-starter</artifactId>
+                <groupId>io.lazyegg</groupId>
+                <artifactId>lazyegg-tenant</artifactId>
                 <version>1.0.0-SNAPSHOT</version>
             </dependency>
 
-            <dependency>
-                <groupId>io.lazyegg.boot</groupId>
-                <artifactId>lazyegg-boot-usermanagement-starter</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>io.lazyegg.boot</groupId>
-                <artifactId>lazyegg-boot-auth-starter</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>io.lazyegg.boot</groupId>
-                <artifactId>lazyegg-boot-db-tenant-starter</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>io.lazyegg.boot</groupId>
-                <artifactId>lazyegg-boot-upload-starter</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>io.lazyegg.boot</groupId>
-                <artifactId>lazyegg-boot-mail-starter</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>io.lazyegg.boot</groupId>
-                <artifactId>lazyegg-boot-filemanagement-starter</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>io.lazyegg.boot</groupId>
-                <artifactId>lazyegg-boot-flowable-starter</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>io.lazyegg.boot</groupId>
-                <artifactId>lazyegg-boot-document-exchange-starter</artifactId>
-                <version>1.0.0-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>io.lazyegg.boot</groupId>
-                <artifactId>lazyegg-boot-projectmanage-starter</artifactId>
-                <version>1.0-SNAPSHOT</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>io.lazyegg.boot</groupId>-->
+<!--                <artifactId>lazyegg-boot-usermanagement-starter</artifactId>-->
+<!--                <version>1.0.0-SNAPSHOT</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>io.lazyegg.boot</groupId>-->
+<!--                <artifactId>lazyegg-boot-auth-starter</artifactId>-->
+<!--                <version>1.0.0-SNAPSHOT</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>io.lazyegg.boot</groupId>-->
+<!--                <artifactId>lazyegg-boot-db-tenant-starter</artifactId>-->
+<!--                <version>1.0.0-SNAPSHOT</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>io.lazyegg.boot</groupId>-->
+<!--                <artifactId>lazyegg-boot-upload-starter</artifactId>-->
+<!--                <version>1.0.0-SNAPSHOT</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>io.lazyegg.boot</groupId>-->
+<!--                <artifactId>lazyegg-boot-mail-starter</artifactId>-->
+<!--                <version>1.0.0-SNAPSHOT</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>io.lazyegg.boot</groupId>-->
+<!--                <artifactId>lazyegg-boot-filemanagement-starter</artifactId>-->
+<!--                <version>1.0.0-SNAPSHOT</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>io.lazyegg.boot</groupId>-->
+<!--                <artifactId>lazyegg-boot-flowable-starter</artifactId>-->
+<!--                <version>1.0.0-SNAPSHOT</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>io.lazyegg.boot</groupId>-->
+<!--                <artifactId>lazyegg-boot-document-exchange-starter</artifactId>-->
+<!--                <version>1.0.0-SNAPSHOT</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>io.lazyegg.boot</groupId>-->
+<!--                <artifactId>lazyegg-boot-projectmanage-starter</artifactId>-->
+<!--                <version>1.0-SNAPSHOT</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>io.lazyegg</groupId>
                 <artifactId>lazyegg-core</artifactId>
-                <version>${project.version}</version>
+                <version>${lazyegg.version}</version>
             </dependency>
             <dependency>
                 <groupId>io.jsonwebtoken</groupId>
