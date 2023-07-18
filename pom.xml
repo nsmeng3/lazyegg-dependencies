@@ -47,6 +47,12 @@
         <snakeyaml.version>2.0</snakeyaml.version>
         <hutool.version>5.8.20</hutool.version>
         <dameng.version>8.1.2.192</dameng.version>
+        <commons-lang3.version>3.4</commons-lang3.version>
+        <commons-io.version>2.13.0</commons-io.version>
+        <mybatis-plus-join.version>1.3.3</mybatis-plus-join.version>
+        <mysql.version>8.0.30</mysql.version>
+        <velocity-engine-core.version>2.3</velocity-engine-core.version>
+        <knife4j-openapi2.version>4.0.0</knife4j-openapi2.version>
     </properties>
 
     <dependencies>
@@ -112,27 +118,27 @@
                 <artifactId>hibernate-validator</artifactId>
                 <version>6.0.22.Final</version>
             </dependency>
-            <dependency>
-                <groupId>javax.el</groupId>
-                <artifactId>javax.el-api</artifactId>
-                <version>3.0.0</version>
-            </dependency>
-            <dependency>
-                <groupId>org.glassfish.web</groupId>
-                <artifactId>javax.el</artifactId>
-                <version>2.2.6</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>javax.el</groupId>-->
+<!--                <artifactId>javax.el-api</artifactId>-->
+<!--                <version>3.0.0</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.glassfish.web</groupId>-->
+<!--                <artifactId>javax.el</artifactId>-->
+<!--                <version>2.2.6</version>-->
+<!--            </dependency>-->
             <!--Validation API End -->
             <!-- Misc -->
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>3.4</version>
+                <version>${commons-lang3.version}</version>
             </dependency>
             <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
-                <version>2.11.0</version>
+                <version>${commons-io.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -257,12 +263,12 @@
             <dependency>
                 <groupId>icu.mhb</groupId>
                 <artifactId>mybatis-plus-join</artifactId>
-                <version>1.3.3</version>
+                <version>${mybatis-plus-join.version}</version>
             </dependency>
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.30</version>
+                <version>${mysql.version}</version>
             </dependency>
             <!-- 达梦 -->
             <dependency>
@@ -278,12 +284,12 @@
             <dependency>
                 <groupId>org.apache.velocity</groupId>
                 <artifactId>velocity-engine-core</artifactId>
-                <version>2.3</version>
+                <version>${velocity-engine-core.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>
-                <version>4.0.0</version>
+                <version>${knife4j-openapi2.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
