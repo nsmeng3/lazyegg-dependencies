@@ -54,6 +54,8 @@
         <mysql.version>8.0.30</mysql.version>
         <velocity-engine-core.version>2.3</velocity-engine-core.version>
         <knife4j-openapi2.version>4.0.0</knife4j-openapi2.version>
+        <guava-retrying.version>2.0.0</guava-retrying.version>
+        <jasypt-spring-boot-starter.version>2.1.2</jasypt-spring-boot-starter.version>
     </properties>
 
     <dependencies>
@@ -303,6 +305,18 @@
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-openapi2-spring-boot-starter</artifactId>
                 <version>${knife4j-openapi2.version}</version>
+            </dependency>
+            <!-- 重试机制 -->
+            <dependency>
+                <groupId>com.github.rholder</groupId>
+                <artifactId>guava-retrying</artifactId>
+                <version>${guava-retrying.version}</version>
+            </dependency>
+            <!-- jasypt 配置加密 -->
+            <dependency>
+                <groupId>com.github.ulisesbocchio</groupId>
+                <artifactId>jasypt-spring-boot-starter</artifactId>
+                <version>${jasypt-spring-boot-starter.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
